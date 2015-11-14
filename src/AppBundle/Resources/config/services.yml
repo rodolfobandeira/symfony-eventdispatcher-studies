@@ -1,0 +1,13 @@
+parameters:
+
+services:
+    app.load_my_page.listener:
+        class: AppBundle\Event\LoadMypageListener
+        tags:
+            - { name: kernel.event_listener, event: app.event.load_my_page, method: onLoadMypage }
+
+    app.change_my_object.listener:
+        class: AppBundle\Event\ChangeMyObjectListener
+        tags:
+            - { name: kernel.event_listener, event: app.event.change_my_object, method: onChangeMyObject }
+
