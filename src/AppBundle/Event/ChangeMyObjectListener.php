@@ -2,13 +2,17 @@
 namespace AppBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
+use AppBundle\Event\FilterMyObjectEvent;
+use AppBundle\Utils\MyObject;
 
 class ChangeMyObjectListener extends Event {
 
-    public function onChangeMyObject(Event $event) {
+    public function onChangeMyObject(FilterMyObjectEvent $event) {
 
-        // Here it will change my Object and return it to the controller modified.
+        $myObject = $event->getMyObject();
 
-        echo 'modified!';
+        $myObject->setChangeMe('Rodolfo Bandeira is the new value!');
+
+        echo '<p>ChangeMyObject event dispatched!</p>';
     }
 }

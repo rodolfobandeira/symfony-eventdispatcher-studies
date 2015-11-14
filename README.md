@@ -11,11 +11,24 @@ Event Dispatcher Studies
 
 **Results:**
 
-You'll see the word *dispached* on the screen. That means the listener was registred as a service and it was dispached by the *indexAction* from *DefaultController*
+The idea was successfully achieved. Two events was registred as a service on the application. 
+First we can see the event `LoadMyPage` executed.
 
----
+The second event is responsible to change the object and send it back to the controller. It was a 
+kind of hack injecting a new value to the object through events every time it' dispached. 
 
-**Todo:**
+Really cool stuff!
 
-- Send an Object to the `onLoadMypage` method, change it and send it back to the controller.
-- Explore more features available on Symfony2 Documentation about the Event Dispatcher component.
+
+output:
+
+```
+LoadMyPage event was dispatched!
+
+ChangeMyObject event dispatched!
+
+array:2 [▼
+  0 => "Hi! This is my value before the event touch me!"
+  1 => "Rodolfo Bandeira is the new value!"
+]
+``
