@@ -1,9 +1,9 @@
 Event Dispatcher Studies
-==============
+-
 
-####This is a simple project to study Event Dispatcher Component from Symfony PHP Framework
+#### This is a simple project to study Event Dispatcher Component from Symfony PHP Framework
 
-####Setup:
+#### Setup:
 - `git clone https://github.com/rodolfobandeira/symfony-eventdispatcher-studies.git`
 - `cd symfony-eventdispatcher-studies`
 - `composer install --prefer-dist`
